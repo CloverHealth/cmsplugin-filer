@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 from cmsplugin_filer_file import __version__
 
 setup(
-    name="cmsplugin-filer",
+    name="clover-cmsplugin-filer",
     version=__version__,
     url='https://github.com/pawelmarkowski/cmsplugin-filer',
     license='BSD',
