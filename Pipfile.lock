@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0d336b1d02f145b266f05e685c0bac8709c20b81a16c78a238965b3230d5727e"
+            "sha256": "a304666e731fbfcaf4c4c09c5a5e37e74711f82041706fdc3ced0c9d259d6332"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -167,6 +167,15 @@
             "markers": "python_version >= '3.8'",
             "version": "==4.2.14"
         },
+        "django-app-helper": {
+            "hashes": [
+                "sha256:8bb50de46ebdb84082be01166a8d5f321f28da61c9c824a60aee1a4f736a64f9",
+                "sha256:ee4a8852227d0cf5586a85948dfb6d82b72a8846b9e3cb2f77a25e1360ad38ae"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.7'",
+            "version": "==3.3.4"
+        },
         "django-appconf": {
             "hashes": [
                 "sha256:c3ae442fba1ff7ec830412c5184b17169a7a1e71cf0864a4c3f93cf4c98a1993",
@@ -249,14 +258,6 @@
             ],
             "index": "pypi",
             "version": "==3.0.0"
-        },
-        "djangocms-helper": {
-            "hashes": [
-                "sha256:41973cb2effdfc05492ceb427afeb23caf6c126a334c9684e4c60b113504d249",
-                "sha256:e7e81db034d3f4cb8c55a17d26b8851775e60788e58849bc0fc5537ce562f3c7"
-            ],
-            "index": "pypi",
-            "version": "==1.2.5"
         },
         "djangocms-text-ckeditor": {
             "hashes": [
@@ -609,11 +610,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:b8b8060bb426838fbe942479c90296ce976249451118ef566a5a0b7d8b78fb05",
-                "sha256:bd63e505105011b25c3c11f753f7e3b8465ea739efddaccef8f0efac2137bac1"
+                "sha256:f171bab1dfbc86b132997f26a119f6056a57950d058587841a0082e8830f9dc5",
+                "sha256:fe384da74336c398e0d956d1cae0669bc02eed936cdb1d49b57de1990dc11ffc"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==70.2.0"
+            "version": "==70.3.0"
         },
         "six": {
             "hashes": [
