@@ -1,7 +1,7 @@
 aldryn-apphook-reload>=0.2.2
 coverage>=3.7.1
 django-appconf
-djangocms-helper>=0.9.1
+django-app-helper==3.3.4
 django-filer
 djangocms-text-ckeditor
 html5lib
