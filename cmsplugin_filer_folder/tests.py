@@ -4,7 +4,12 @@ from __future__ import unicode_literals
 from tempfile import mkstemp
 
 from django.contrib.auth.models import AnonymousUser
-from django.utils.encoding import force_text
+try:
+    from django.utils.encoding import force_text
+except ImportError:
+    from django.utils.encoding import force_str as force_text
+
+
 
 from filer.models import Folder, File, Image
 from django.core.files import File as DjangoFile

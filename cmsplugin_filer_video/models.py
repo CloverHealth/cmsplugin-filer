@@ -3,7 +3,10 @@ from __future__ import unicode_literals
 from cms.models import CMSPlugin
 from cmsplugin_filer_video import settings
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
+try:
+    from django.utils.translation import ugettext_lazy as _
+except ImportError:
+    from django.utils.translation import gettext_lazy as _
 from filer.fields.file import FilerFileField
 from filer.fields.image import FilerImageField
 from os.path import basename
