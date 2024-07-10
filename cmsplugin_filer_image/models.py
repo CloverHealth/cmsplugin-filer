@@ -2,10 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-try:
-    from django.utils.translation import ugettext_lazy as _
-except ImportError:
-    from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from filer.fields.file import FilerFileField
 from filer.fields.image import FilerImageField
