@@ -3,8 +3,8 @@ CHANGELOG
 
 3.0.0 (2024-07-10)
 ------------------
-* Add support for DJango 4.2
-* Add support for DJango CMS 3.11
+* Add support for Django 4.2
+* Add support for Django CMS 3.11
 * Drop support prior to Django 4.2
 * Drop support prior to Django CMS 3.11
 
