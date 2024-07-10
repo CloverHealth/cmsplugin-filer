@@ -33,3 +33,7 @@ test:
 .PHONY: lock
 lock:
 	pipenv lock
+
+.PHONY: build
+build:
+	python setup.py sdist bdist_wheel
