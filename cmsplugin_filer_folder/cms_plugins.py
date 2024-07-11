@@ -1,7 +1,7 @@
 from cms.plugin_pool import plugin_pool
 from cms.plugin_base import CMSPluginBase
 from django.template.loader import select_template
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from . import models
 from .conf import settings
 
@@ -40,7 +40,7 @@ class FilerFolderPlugin(CMSPluginBase):
             return qs_files.filter(is_public=True)
 
     def get_children(self, folder):
-        return folder.get_children()
+        return folder.children
 
     def render(self, context, instance, placeholder):
         user = context['request'].user
@@ -48,7 +48,7 @@ class FilerFolderPlugin(CMSPluginBase):
         if instance.folder_id:
             folder_files = self.get_folder_files(instance.folder, user)
             folder_images = self.get_folder_images(instance.folder, user)
-            folder_folders = self.get_children(instance.folder)
+            folder_folders = self.get_children(instance.folder).all()
         else:
             folder_files = File.objects.none()
             folder_images = BaseImage.objects.none()

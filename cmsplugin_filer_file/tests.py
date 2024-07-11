@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
+
 
 from cmsplugin_filer_tests_shared.base import (
     BasePluginTestMixin, CmsPluginsFilerBaseTestCase,
@@ -19,7 +20,7 @@ class CmsPluginFilerFileTestCase(BasePluginTestMixin,
         filer_file_plugin = self._create_plugin(file=None)
         self.assertEqual(filer_file_plugin.get_file_name(), '')
         self.assertEqual(filer_file_plugin.get_icon_url(), '')
-        self.assertEqual(force_text(filer_file_plugin), '<empty>')
+        self.assertEqual(force_str(filer_file_plugin), '<empty>')
 
     def test_get_file_name(self):
         filer_file_plugin = self.create_plugin()
@@ -44,9 +45,9 @@ class CmsPluginFilerFileTestCase(BasePluginTestMixin,
 
     def test_str(self):
         filer_file_plugin = self.create_plugin()
-        self.assertEqual(force_text(filer_file_plugin), 'test_file.jpg')
+        self.assertEqual(force_str(filer_file_plugin), 'test_file.jpg')
         filer_file_plugin.title = 'New title for file'
         filer_file_plugin.save()
         filer_file_plugin = filer_file_plugin._meta.model.objects.get(
             pk=filer_file_plugin.pk)
-        self.assertEqual(force_text(filer_file_plugin), 'New title for file')
+        self.assertEqual(force_str(filer_file_plugin), 'New title for file')

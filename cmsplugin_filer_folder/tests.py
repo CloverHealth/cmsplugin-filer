@@ -4,8 +4,7 @@ from __future__ import unicode_literals
 from tempfile import mkstemp
 
 from django.contrib.auth.models import AnonymousUser
-from django.utils.encoding import force_text
-
+from django.utils.encoding import force_str
 from filer.models import Folder, File, Image
 from django.core.files import File as DjangoFile
 
@@ -20,7 +19,7 @@ class CmsPluginFilerFolderTestCase(BasePluginTestMixin,
 
     def test_no_folder(self):
         filer_folder_plugin = self._create_plugin(folder=None)
-        self.assertEqual(force_text(filer_folder_plugin), '<empty>')
+        self.assertEqual(force_str(filer_folder_plugin), '<empty>')
 
     def get_plugin_params(self):
         folder = Folder(name='test_plugin', parent=None)
