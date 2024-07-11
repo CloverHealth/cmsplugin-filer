@@ -35,11 +35,7 @@ lock:
 	pipenv lock
 
 .PHONY: build
-build:
-	python setup.py sdist bdist_wheel
-
-.PHONY: development_build
-development_build: clean_build
+build: clean_build
 	pipx run build
 # python -m twine upload --skip-existing --repository-url https://us-python.pkg.dev/clover-sre-001/clover-production/ dist/*
 
